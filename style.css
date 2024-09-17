@@ -1,0 +1,145 @@
+
+ body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+
+header {
+    background-color: #394a5e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+
+
+article img {
+    max-width: 100%;
+    border-radius: 10px;
+    height: auto;
+}
+
+h2 {
+    color: #0d2d4e;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #070606dc;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+footer {
+    background-color: #343a40;
+    color: rgb(228, 223, 223);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ebe8e8dc;
+}
+
+
+.articles {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    gap: 20px; 
+    margin: 20px 0;
+}
+
+
+.articles article {
+    flex: 1 1 calc(33.333% - 40px); 
+    max-width: calc(33.333% - 40px); 
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    justify-content: space-between; 
+}
+
+
+.articles article img {
+    width: 100%; 
+    height: 200px; 
+    border-radius: 10px;
+    height: auto;
+}
+
+
+@media (max-width: 768px) {
+    .articles article {
+        flex: 1 1 100%; 
+        max-width: 100%;
+    }
+} 
+/* Media Queries para diferentes tamaños de pantalla */
+
+/* Pantallas grandes (más de 900px) */
+@media (min-width: 900px) {
+    .articles article {
+        flex: 1 1 calc(33.333% - 40px); /* 3 columnas */
+        max-width: calc(33.333% - 40px);
+    }
+
+    h1 {
+        font-size: 3rem; /* Ajustar el tamaño del título para pantallas grandes */
+    }
+}
+
+/* Pantallas medianas (600px a 899px) */
+@media (min-width: 600px) and (max-width: 899px) {
+    .articles article {
+        flex: 1 1 calc(50% - 40px); /* 2 columnas */
+        max-width: calc(50% - 40px);
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Ajustar el tamaño del título */
+    }
+}
+
+/* Pantallas pequeñas (menos de 600px) */
+@media (max-width: 599px) {
+    .articles {
+        flex-direction: column; /* Los artículos se apilan en una sola columna */
+    }
+
+    .articles article {
+        flex: 1 1 100%; /* Ocupan el 100% del ancho */
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 2rem; /* Título más pequeño en pantallas pequeñas */
+    }
+
+    /* Ajustar el tamaño del texto y de las imágenes */
+    .articles article img {
+        height: auto; /* Permitir que las imágenes se ajusten dinámicamente */
+    }
+    
+    .articles article p {
+        font-size: 1rem; /* Fuente más legible para pantallas pequeñas */
+    }
+}
